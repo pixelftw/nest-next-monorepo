@@ -1,0 +1,90 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Auth {
+  """auth token"""
+  accessToken: String!
+
+  """refresh token"""
+  refreshToken: String!
+}
+
+input CreateUserInput {
+  """email of the user"""
+  email: String!
+
+  """First name of the user"""
+  firstName: String!
+
+  """last name of the user"""
+  lastName: String
+
+  """password of the user"""
+  password: String
+}
+
+input LoginInput {
+  """email of the user and it must be a unique value"""
+  email: String!
+
+  """a secure password of the user account"""
+  password: String!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  deleteUserById(id: String!): User!
+  refresh: Auth!
+  signIn(singIn: LoginInput!): Auth!
+  signUp(signUp: SignUpInput!): Auth!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+}
+
+type Query {
+  user: [User!]!
+  userById(id: String!): User!
+}
+
+input SignUpInput {
+  """email of the user and it must be a unique value"""
+  email: String!
+
+  """first name of the user."""
+  firstName: String!
+
+  """last name of the user."""
+  lastName: String
+
+  """a secure password of the user account"""
+  password: String!
+}
+
+input UpdateUserInput {
+  """email of the user"""
+  email: String
+
+  """First name of the user"""
+  firstName: String
+  id: ID!
+
+  """last name of the user"""
+  lastName: String
+
+  """password of the user"""
+  password: String
+}
+
+type User {
+  """email field of the user"""
+  email: String!
+
+  """first name of the user"""
+  firstName: String!
+
+  """id of the user"""
+  id: String!
+
+  """last name of the user"""
+  lastName: String
+}
