@@ -1,9 +1,9 @@
-import { Button } from "@vianlix/ui";
+import { Hero } from "@components/homepage";
 
 export default function Home() {
   return (
     <div>
-      <Button>Shadcn button</Button>
+      <Hero />
     </div>
   );
 }
