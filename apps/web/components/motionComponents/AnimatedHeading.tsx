@@ -13,21 +13,21 @@ export function AnimatedHeading({
   children,
 }: Readonly<AnimatedHeadingProps>) {
   if (typeof children !== "string") {
-    throw new Error("`AnimatedHeading` only renders text content");
+    throw new Error("AnimatedHeading only renders text content");
   }
   const words = children.split(" ");
 
   return (
     <motion.h2
       transition={{
-        staggerChildren: 0.05,
+        staggerChildren: 0.1,
       }}
       initial="initial"
       animate="animate"
       className={cn('flex flex-wrap gap-3 font-bold"', className)}
     >
       {words.map((word, i) => (
-        <span className="overflow-hidden py-2">
+        <span className="overflow-hidden py-2 mx-2">
           <motion.span key={word + i} variants={moveIn} className="block">
             {word}
           </motion.span>

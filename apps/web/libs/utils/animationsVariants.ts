@@ -1,7 +1,7 @@
 import { cubicBezier, Transition, Variants } from "framer-motion";
 
 const transition: Transition = {
-  duration: 0.6,
+  duration: 1,
   ease: cubicBezier(0.25, 1, 0.5, 1),
 };
 
