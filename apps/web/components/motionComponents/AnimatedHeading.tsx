@@ -15,12 +15,13 @@ export function AnimatedHeading({
   if (typeof children !== "string") {
     throw new Error("AnimatedHeading only renders text content");
   }
+
   const words = children.split(" ");
 
   return (
     <motion.h2
       transition={{
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       }}
       initial="initial"
       animate="animate"
