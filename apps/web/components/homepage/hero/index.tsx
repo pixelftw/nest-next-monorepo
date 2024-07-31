@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 relative">
-      <div className="container flex flex-col justify-center items-center gap-8 z-10">
-        <AnimatedHeading className="uppercase text-9xl font-extrabold justify-center gap-2">
+    <section>
+      <div className="container flex flex-col justify-center items-center gap-8 z-10 w-full py-12 sm:px-12 md:px-20">
+        <AnimatedHeading className="uppercase text-4xl sm:text-6xl md:text-8xl font-extrabold justify-center gap-1">
           Personalized Notebooks
         </AnimatedHeading>
         <MoveIn>
@@ -15,13 +15,14 @@ export function Hero() {
             notebooks.
           </p>
         </MoveIn>
-        <MoveIn className="rounded-2xl overflow-hidden">
+        <MoveIn className="rounded-2xl w-full overflow-hidden">
           <Image
             src="/images/hero-image.jpg"
             width={800}
             height={400}
             alt="hero-image"
-            className="w-[80rem]"
+            className="w-full h-full"
+            priority
           />
         </MoveIn>
       </div>

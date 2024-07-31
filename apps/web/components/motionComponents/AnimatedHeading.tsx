@@ -25,11 +25,11 @@ export function AnimatedHeading({
       }}
       initial="initial"
       animate="animate"
-      className={cn('flex flex-wrap gap-3 font-bold"', className)}
+      className={cn('flex flex-wrap font-bold"', className)}
     >
       {words.map((word, i) => (
-        <span className="overflow-hidden py-2 mx-2">
-          <motion.span key={word + i} variants={moveIn} className="block">
+        <span key={word + i} className="overflow-hidden md:py-0 mx-2">
+          <motion.span variants={moveIn} className="block">
             {word}
           </motion.span>
         </span>
