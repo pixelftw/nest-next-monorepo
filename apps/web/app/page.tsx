@@ -1,9 +1,13 @@
-import { Button } from "@vianlix/ui";
+import { Hero, Steps } from "@components/homepage";
+import { SmoothScroll } from "@components/smoothScroll";
 
 export default function Home() {
   return (
-    <div>
-      <Button>Shadcn button</Button>
-    </div>
+    <SmoothScroll>
+      <main>
+        <Hero />
+        <Steps />
+      </main>
+    </SmoothScroll>
   );
 }

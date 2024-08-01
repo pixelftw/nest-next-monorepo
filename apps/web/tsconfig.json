@@ -6,6 +6,11 @@
         "name": "next"
       },
     ],
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@libs/*": ["./libs/*"]
+
+    }
   },
   "include": [
     "next-env.d.ts",
