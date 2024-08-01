@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "@vianlix/ui/globals.css";
 import { cn } from "@vianlix/ui/lib/utils";
 import Navbar from "@components/layout/navbar";
-import { SmoothScroll } from "@components/smoothScroll";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={cn(geistSans.variable, geistMono.variable)}>
         <Navbar />
-        <SmoothScroll>{children}</SmoothScroll>
+        {children}
       </body>
     </html>
   );

@@ -1,10 +1,13 @@
 import { Hero, Steps } from "@components/homepage";
+import { SmoothScroll } from "@components/smoothScroll";
 
 export default function Home() {
   return (
-    <div>
-      <Hero />
-      <Steps />
-    </div>
+    <SmoothScroll>
+      <main>
+        <Hero />
+        <Steps />
+      </main>
+    </SmoothScroll>
   );
 }
