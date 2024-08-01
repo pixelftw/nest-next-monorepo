@@ -1,13 +1,28 @@
 "use client";
 import React, { PropsWithChildren } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@vianlix/ui/lib/utils";
 
 interface StaggerChildrenProps extends PropsWithChildren {
-  variant: "from" | "to";
+  initial: "from" | "to";
+  animate: "from" | "to";
+  className?: string;
 }
 
-export function StaggerChildren({ children }: Readonly<StaggerChildrenProps>) {
+export function StaggerChildren({
+  children,
+  className,
+  initial,
+  animate,
+}: Readonly<StaggerChildrenProps>) {
   return (
-    <motion.div transition={{ staggerChildren: 0.2 }}>{children}</motion.div>
+    <motion.div
+      className={cn(className)}
+      initial={initial}
+      animate={animate}
+      transition={{ staggerChildren: 0.2 }}
+    >
+      {children}
+    </motion.div>
   );
 }

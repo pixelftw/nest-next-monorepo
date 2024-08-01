@@ -11,6 +11,7 @@
   "dependencies": {
     "@vianlix/ui": "workspace:*",
     "framer-motion": "^11.2.14",
+    "lenis": "^1.1.9",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522"

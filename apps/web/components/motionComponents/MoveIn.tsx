@@ -7,13 +7,19 @@ interface MoveInProps extends PropsWithChildren, MotionProps {
   className?: string;
 }
 
-export function MoveIn({ children, className }: Readonly<MoveInProps>) {
+export function MoveIn({
+  children,
+  className,
+  direction,
+  animate,
+  initial,
+}: Readonly<MoveInProps>) {
   return (
     <motion.div
-      variants={moveIn}
+      variants={moveIn(direction)}
       className={className}
-      initial="initial"
-      animate="animate"
+      initial={initial}
+      animate={animate}
     >
       {children}
     </motion.div>
